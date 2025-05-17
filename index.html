@@ -1,324 +1,89 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portfólio</title>
-    <style>
-        /* Estilo "Livros e Café" */
-        :root {
-            --marrom-escuro: #35281E;
-            --marrom-medio: #795548;
-            --bege-claro: #F5F1E8;
-            --bege-medio: #E6DFD2;
-            --verde-escuro: #2D4F39;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Georgia', serif;
-        }
-        
-        body {
-            background-color: var(--bege-claro);
-            color: var(--marrom-escuro);
-            line-height: 1.6;
-            padding: 20px;
-            background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23d9d0c1' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background-color: var(--bege-claro);
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-            position: relative;
-        }
-        
-        .container::before {
-            content: "";
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            right: 10px;
-            bottom: 10px;
-            border: 1px solid var(--marrom-medio);
-            border-radius: 4px;
-            pointer-events: none;
-            opacity: 0.5;
-        }
-        
-        header {
-            text-align: center;
-            padding: 30px 0;
-            border-bottom: 2px solid var(--marrom-medio);
-            position: relative;
-        }
-        
-        header::after {
-            content: "☕";
-            font-size: 24px;
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: var(--bege-claro);
-            padding: 0 20px;
-        }
-        
-        h1 {
-            font-size: 3rem;
-            color: var(--marrom-escuro);
-            margin-bottom: 10px;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-        }
-        
-        .apresentacao {
-            padding: 40px 20px;
-            font-size: 1.1rem;
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-            border-bottom: 1px dashed var(--marrom-medio);
-            position: relative;
-            line-height: 1.8;
-        }
-        
-        .apresentacao::after {
-            content: "📚";
-            font-size: 24px;
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: var(--bege-claro);
-            padding: 0 20px;
-        }
-        
-        .jogos-titulo {
-            text-align: center;
-            margin: 50px 0 30px;
-            font-size: 2.2rem;
-            color: var(--verde-escuro);
-        }
-        
-        .jogos-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 30px;
-        }
-        
-        .jogo-card {
-            background-color: var(--bege-medio);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-        }
-        
-        .jogo-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
-        }
-        
-        .jogo-card::before {
-            content: "";
-            position: absolute;
-            top: 5px;
-            left: 5px;
-            right: 5px;
-            bottom: 5px;
-            border: 1px solid var(--marrom-escuro);
-            border-radius: 4px;
-            pointer-events: none;
-            opacity: 0.2;
-        }
-        
-        .jogo-imagem {
-            position: relative;
-            height: 200px;
-            overflow: hidden;
-        }
-        
-        .jogo-imagem img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        
-        .jogo-card:hover .jogo-imagem img {
-            transform: scale(1.05);
-        }
-        
-        .jogo-imagem::after {
-            content: "Jogar";
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%) translateY(100%);
-            background-color: var(--verde-escuro);
-            color: white;
-            padding: 8px 16px;
-            border-radius: 4px;
-            transition: transform 0.3s ease;
-            font-weight: bold;
-        }
-        
-        .jogo-card:hover .jogo-imagem::after {
-            transform: translateX(-50%) translateY(-20px);
-        }
-        
-        .jogo-detalhes {
-            padding: 20px;
-        }
-        
-        .jogo-titulo {
-            font-size: 1.5rem;
-            color: var(--marrom-escuro);
-            margin-bottom: 10px;
-            border-bottom: 2px solid var(--verde-escuro);
-            padding-bottom: 10px;
-            position: relative;
-        }
-        
-        .jogo-descricao {
-            margin-bottom: 15px;
-            color: var(--marrom-escuro);
-        }
-        
-        .contribuicoes {
-            background-color: rgba(45, 79, 57, 0.1);
-            padding: 15px;
-            border-radius: 4px;
-            border-left: 3px solid var(--verde-escuro);
-        }
-        
-        .contribuicoes h4 {
-            color: var(--verde-escuro);
-            margin-bottom: 8px;
-            font-size: 1.1rem;
-        }
-        
-        footer {
-            text-align: center;
-            margin-top: 60px;
-            padding: 20px;
-            color: var(--marrom-medio);
-            font-style: italic;
-            font-size: 0.9rem;
-            border-top: 1px solid var(--marrom-medio);
-        }
-        
-        .coffee-icon, .book-icon {
-            font-size: 20px;
-            margin: 0 10px;
-        }
-        
-        @media (max-width: 768px) {
-            .jogos-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .container {
-                padding: 15px;
-            }
-            
-            h1 {
-                font-size: 2.2rem;
-            }
-            
-            .apresentacao {
-                padding: 30px 10px;
-                font-size: 1rem;
-            }
-        }
-    </style>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Seu Nome</h1>
-            <p>Desenvolvedor de Jogos</p>
+            <h1>Victor Ferrari</h1>
+            <p>Game Developer</p>
         </header>
         
         <section class="apresentacao">
-            <p>Olá! Sou um desenvolvedor de jogos apaixonado por criar experiências interativas e envolventes. Com experiência em design e programação, busco sempre inovar e trazer novas perspectivas para os meus projetos. Este é meu portfólio onde compartilho um pouco do meu trabalho e paixão pelos jogos.</p>
+            <p>Hello! I'm a game developer passionate about creating interactive and engaging experiences. With experience in design and programming, I always seek to innovate and bring new perspectives to my projects. This is my portfolio where I share some of my work and passion for games.</p>
         </section>
         
-        <h2 class="jogos-titulo">Meus Jogos</h2>
+        <h2 class="jogos-titulo">My Games</h2>
         
         <div class="jogos-container">
-            <!-- Jogo 1 -->
+            <!-- Game 1 -->
             <div class="jogo-card">
                 <a href="#link-para-jogo-1">
                     <div class="jogo-imagem">
-                        <img src="/api/placeholder/400/320" alt="Imagem do Jogo 1">
+                        <img src="/api/placeholder/400/320" alt="Game 1 Image">
                     </div>
                 </a>
                 <div class="jogo-detalhes">
-                    <h3 class="jogo-titulo">Nome do Jogo 1</h3>
+                    <h3 class="jogo-titulo">Game Name 1</h3>
                     <div class="jogo-descricao">
-                        <p>Esta é uma descrição detalhada sobre o jogo. Explique aqui o conceito, gênero, mecânicas principais e qualquer informação relevante sobre o desenvolvimento e a experiência que o jogador terá.</p>
+                        <p>This is a detailed description about the game. Explain here the concept, genre, main mechanics, and any relevant information about the development and the experience that the player will have.</p>
                     </div>
                     <div class="contribuicoes">
-                        <h4>Minhas Contribuições:</h4>
+                        <h4>My Contributions:</h4>
                         <ul>
-                            <li>Programação da mecânica principal</li>
-                            <li>Design de níveis</li>
-                            <li>Implementação do sistema de IA</li>
+                            <li>Main mechanic programming</li>
+                            <li>Level design</li>
+                            <li>AI system implementation</li>
                         </ul>
                     </div>
                 </div>
             </div>
             
-            <!-- Jogo 2 -->
+            <!-- Game 2 -->
             <div class="jogo-card">
                 <a href="#link-para-jogo-2">
                     <div class="jogo-imagem">
-                        <img src="/api/placeholder/400/320" alt="Imagem do Jogo 2">
+                        <img src="/api/placeholder/400/320" alt="Game 2 Image">
                     </div>
                 </a>
                 <div class="jogo-detalhes">
-                    <h3 class="jogo-titulo">Nome do Jogo 2</h3>
+                    <h3 class="jogo-titulo">Game Name 2</h3>
                     <div class="jogo-descricao">
-                        <p>Descrição detalhada sobre este jogo. Fale sobre o que torna este jogo especial, suas inspirações, desafios de desenvolvimento e como ele se destaca em seu portfólio.</p>
+                        <p>Detailed description about this game. Talk about what makes this game special, its inspirations, development challenges, and how it stands out in your portfolio.</p>
                     </div>
                     <div class="contribuicoes">
-                        <h4>Minhas Contribuições:</h4>
+                        <h4>My Contributions:</h4>
                         <ul>
-                            <li>Design da narrativa</li>
-                            <li>Desenvolvimento do sistema de física</li>
-                            <li>Programação de efeitos visuais</li>
+                            <li>Narrative design</li>
+                            <li>Physics system development</li>
+                            <li>Visual effects programming</li>
                         </ul>
                     </div>
                 </div>
             </div>
             
-            <!-- Jogo 3 -->
+            <!-- Game 3 -->
             <div class="jogo-card">
                 <a href="#link-para-jogo-3">
                     <div class="jogo-imagem">
-                        <img src="/api/placeholder/400/320" alt="Imagem do Jogo 3">
+                        <img src="/api/placeholder/400/320" alt="Game 3 Image">
                     </div>
                 </a>
                 <div class="jogo-detalhes">
-                    <h3 class="jogo-titulo">Nome do Jogo 3</h3>
+                    <h3 class="jogo-titulo">Game Name 3</h3>
                     <div class="jogo-descricao">
-                        <p>Explique aqui o contexto deste jogo, seu público-alvo, plataformas e quaisquer prêmios ou reconhecimentos que ele recebeu. Compartilhe também o processo criativo por trás do desenvolvimento.</p>
+                        <p>Explain here the context of this game, its target audience, platforms, and any awards or recognition it has received. Also share the creative process behind the development.</p>
                     </div>
                     <div class="contribuicoes">
-                        <h4>Minhas Contribuições:</h4>
+                        <h4>My Contributions:</h4>
                         <ul>
-                            <li>Direção criativa</li>
-                            <li>Implementação do sistema de progressão</li>
-                            <li>Programação multiplayer</li>
+                            <li>Creative direction</li>
+                            <li>Progression system implementation</li>
+                            <li>Multiplayer programming</li>
                         </ul>
                     </div>
                 </div>
@@ -326,7 +91,10 @@
         </div>
         
         <footer>
-            <p><span class="book-icon">📚</span> Desenvolvido com paixão e muito café <span class="coffee-icon">☕</span> — © 2025</p>
+            <p><span class="book-icon">📚</span> Developed with passion and lots of coffee <span class="coffee-icon">☕</span> — © 2025</p>
+            <div class="links-adicionais">
+                <p>Learn more about my work: <a href="Curriculo_Victor_en.pdf" class="footer-link" target="_blank">My Curriculum</a> | <a href="#link-todos-jogos" class="footer-link">All My Games</a></p>
+            </div>
         </footer>
     </div>
 </body>
