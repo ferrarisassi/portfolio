@@ -210,9 +210,9 @@ footer {
 }
 
 .links-adicionais {
-    margin-top: 15px;
-    padding-top: 15px;
-    border-top: 1px dashed var(--marrom-medio);
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed var(--marrom-medio);
     font-style: normal;
 }
 
