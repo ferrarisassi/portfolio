@@ -151,7 +151,7 @@ h1 {
 }
 
 .jogo-imagem::after {
-    content: "Jogar";
+    content: "Play";
     position: absolute;
     bottom: 0;
     left: 50%;
