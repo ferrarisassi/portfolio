@@ -3,33 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Victor Ferrari - Game Designer</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">VF</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#professional" class="nav-link">Professional</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
     <div class="container">
-        <header>
+        <header id="home">
             <h1>Victor Ferrari</h1>
             <p>Game Designer</p>
         </header>
         
-        <section class="apresentacao">
-            <p>I'm a game designer with a passion for crafting interactive and immersive experiences. My background in Mechanical Engineering, combined with a Master's in Computer Science, has provided me with a foundation in both design and programming. I strive to innovate and bring fresh perspectives to every project I undertake. This portfolio showcases a selection of my work, reflecting my dedication to the art, science, and impact of game development.</p>
-        </section>
-        
         <!-- Professional Games Section -->
-        <h2 class="jogos-titulo">Professional Games</h2>
+        <section id="professional">
+            <h2 class="jogos-titulo">Professional Games</h2>
         
         <div class="jogos-container">
             <!-- Professional Game 1 -->
             <div class="jogo-card">
-                <a href="https://goiabagamesstudio.itch.io/sweet-swipe">
+                <a href="https://goiabagamesstudio.itch.io/sweet-swipe" target="_blank">
                     <div class="jogo-imagem">
                         <img src="SweetSwipe.png" alt="Sweet Swipe">
                     </div>
                 </a>
                 <div class="jogo-detalhes">
-                    <h3 class="jogo-titulo">Sweet Swipe</h3>
+                    <h3 class="jogo-titulo"><a href="https://goiabagamesstudio.itch.io/sweet-swipe" target="_blank" class="game-title-link">Sweet Swipe</a></h3>
                     <div class="jogo-descricao">
                         <p>When Daniel is wrongfully arrested, young Tadeu must use his parkour skills to race against time, explore the city, and prove his brother's innocence. Dive into an emotional story about dreams, family, and resilience as you follow the path that could change their lives forever.</p>
                     </div>
@@ -42,18 +57,19 @@
                             <li>Designed and implemented all the user's interface</li>
                         </ul>
                     </div>
+                    <a href="https://goiabagamesstudio.itch.io/sweet-swipe" target="_blank" class="play-button">Play Game</a>
                 </div>
             </div>
 
             <!-- Professional Game 2 -->
             <div class="jogo-card">
-                <a href="https://store.steampowered.com/app/1579710/Nara_Contos_de_Resistncia/">
+                <a href="https://store.steampowered.com/app/1579710/Nara_Contos_de_Resistncia/" target="_blank">
                     <div class="jogo-imagem">
                         <img src="Naara.jpg" alt="Naara">
                     </div>
                 </a>
                 <div class="jogo-detalhes">
-                    <h3 class="jogo-titulo">Naara</h3>
+                    <h3 class="jogo-titulo"><a href="https://store.steampowered.com/app/1579710/Nara_Contos_de_Resistncia/" target="_blank" class="game-title-link">Naara</a></h3>
                     <div class="jogo-descricao">
                         <p>Naara tells the story of a Brazilian Tupinambá indigenous woman who, in the year 1500, discovers the truth about her ancestry, and using space-time and elemental arrows as allies, must sneak through shadows to fight oppression in its most different forms and faces.</p>
                     </div>
@@ -66,18 +82,19 @@
                             <li>Implemented the cinematic framework so designer could implement their stories</li>
                         </ul>
                     </div>
+                    <a href="https://store.steampowered.com/app/1579710/Nara_Contos_de_Resistncia/" target="_blank" class="play-button">View on Steam</a>
                 </div>
             </div>
             
             <!-- Professional Game 3 -->
             <div class="jogo-card">
-                <a href="https://store.steampowered.com/app/1051900/Exit_Limbo_Opening/">
+                <a href="https://store.steampowered.com/app/1051900/Exit_Limbo_Opening/" target="_blank">
                     <div class="jogo-imagem">
                         <img src="ExitLimbo.jpg" alt="Exit Limbo">
                     </div>
                 </a>
                 <div class="jogo-detalhes">
-                    <h3 class="jogo-titulo">Exit Limbo</h3>
+                    <h3 class="jogo-titulo"><a href="https://store.steampowered.com/app/1051900/Exit_Limbo_Opening/" target="_blank" class="game-title-link">Exit Limbo</a></h3>
                     <div class="jogo-descricao">
                         <p>Exit Limbo : Opening is the first chapter of a neo-retro side-scrolling beat 'em up with adventure elements, elaborated fighting mechanics, memorable enemies and a truly unique setting and visual art style.</p>
                     </div>
@@ -89,23 +106,26 @@
                             <li>Visual effects programming</li>
                         </ul>
                     </div>
+                    <a href="https://store.steampowered.com/app/1051900/Exit_Limbo_Opening/" target="_blank" class="play-button">View on Steam</a>
                 </div>
             </div>
         </div>
+        </section>
         
         <!-- Game Jams and Side Projects Section -->
-        <h2 class="jogos-titulo">Game Jams and Side Projects</h2>
+        <section id="projects">
+            <h2 class="jogos-titulo">Game Jams and Side Projects</h2>
         
         <div class="jogos-container">
             <!-- Side Project 1 -->
             <div class="jogo-card">
-                <a href="https://victorsassi.itch.io/the-adventure-book">
+                <a href="https://victorsassi.itch.io/the-adventure-book" target="_blank">
                     <div class="jogo-imagem">
                         <img src="TheAdventureBook.png" alt="The Adventure Book">
                     </div>
                 </a>
                 <div class="jogo-detalhes">
-                    <h3 class="jogo-titulo">The Adventure Book</h3>
+                    <h3 class="jogo-titulo"><a href="https://victorsassi.itch.io/the-adventure-book" target="_blank" class="game-title-link">The Adventure Book</a></h3>
                     <div class="jogo-descricao">
                         <p>Developed for the Game Jam Plus 22/23. Relive the excitement of having your life set by the dice roll. Play this fast pace multiplatform game where you, the adventurer, try to crawl out of the dungeon.</p>
                     </div>
@@ -117,18 +137,19 @@
                             <li>Animated the characters</li>
                         </ul>
                     </div>
+                    <a href="https://victorsassi.itch.io/the-adventure-book" target="_blank" class="play-button">Play Game</a>
                 </div>
             </div>
             
             <!-- Side Project 2 -->
             <div class="jogo-card">
-                <a href="https://rollinorama.itch.io/joene-no-castelo-ilusionista">
+                <a href="https://rollinorama.itch.io/joene-no-castelo-ilusionista" target="_blank">
                     <div class="jogo-imagem">
                         <img src="Joene.png" alt="Joene">
                     </div>
                 </a>
                 <div class="jogo-detalhes">
-                    <h3 class="jogo-titulo">Joene e o Castelo Ilusionista</h3>
+                    <h3 class="jogo-titulo"><a href="https://rollinorama.itch.io/joene-no-castelo-ilusionista" target="_blank" class="game-title-link">Joene e o Castelo Ilusionista</a></h3>
                     <div class="jogo-descricao">
                         <p>Developed for the PodQuestJam 2021. Embark on this challenge and help Joene discover what happened to her family's castle! In the Illusionist Castle, nothing is what it seems to be. Taken by a strange curse, the castle that used to be cozy and welcoming is now dark and menacing. Explore its rooms, unravel its mysteries, and use the Light of Truth to free the castle from the Curse!</p>
                     </div>
@@ -139,18 +160,19 @@
                             <li>Created the tutorial levels which teach the player the game mechanics</li>
                         </ul>
                     </div>
+                    <a href="https://rollinorama.itch.io/joene-no-castelo-ilusionista" target="_blank" class="play-button">Play Game</a>
                 </div>
             </div>
 
             <!-- Side Project 3 -->
             <div class="jogo-card">
-                <a href="https://victorsassi.itch.io/of-a-feather">
+                <a href="https://victorsassi.itch.io/of-a-feather" target="_blank">
                     <div class="jogo-imagem">
                         <img src="Feather.png" alt="Feather">
                     </div>
                 </a>
                 <div class="jogo-detalhes">
-                    <h3 class="jogo-titulo">Of a Feather</h3>
+                    <h3 class="jogo-titulo"><a href="https://victorsassi.itch.io/of-a-feather" target="_blank" class="game-title-link">Of a Feather</a></h3>
                     <div class="jogo-descricao">
                         <p>Developed for the Cultural-Cross Impact Gamejam 2022. You play as a crow who has lost its feathers and cannot fly. In order to regain your ability to fly, you must talk to people and listen to their stories. You will be given a feather in learning about their experiences and doing small quests for them. When you gather enough feathers, you can fly away and win the game.</p>
                     </div>
@@ -161,18 +183,19 @@
                             <li>Designed and implemented the quest system</li>
                         </ul>
                     </div>
+                    <a href="https://victorsassi.itch.io/of-a-feather" target="_blank" class="play-button">Play Game</a>
                 </div>
             </div>
 
             <!-- Side Project 4 -->
             <div class="jogo-card">
-                <a href="https://victorsassi.itch.io/wheres-my-grandma">
+                <a href="https://victorsassi.itch.io/wheres-my-grandma" target="_blank">
                     <div class="jogo-imagem">
                         <img src="Grandma.png" alt="Grandma">
                     </div>
                 </a>
                 <div class="jogo-detalhes">
-                    <h3 class="jogo-titulo">Where's My Grandma</h3>
+                    <h3 class="jogo-titulo"><a href="https://victorsassi.itch.io/wheres-my-grandma" target="_blank" class="game-title-link">Where's My Grandma</a></h3>
                     <div class="jogo-descricao">
                         <p>Final project of my technical programming degree in 2020. Your lost and confused grandmother entered an abandoned factory called SUZU. You need to find her while trying not to be killed.</p>
                     </div>
@@ -183,18 +206,19 @@
                             <li>Created and implemented a level generator based on pixelated images and wrote about it in this <a href="https://victorsassi.itch.io/wheres-my-grandma/devlog/153114/level-generator" class="footer-link" target="_blank">article</a></li>
                         </ul>
                     </div>
+                    <a href="https://victorsassi.itch.io/wheres-my-grandma" target="_blank" class="play-button">Play Game</a>
                 </div>
             </div>
 
             <!-- Side Project 5 -->
             <div class="jogo-card">
-                <a href="https://victorsassi.itch.io/bow-man">
+                <a href="https://victorsassi.itch.io/bow-man" target="_blank">
                     <div class="jogo-imagem">
                         <img src="BowMan.png" alt="BowMan">
                     </div>
                 </a>
                 <div class="jogo-detalhes">
-                    <h3 class="jogo-titulo">Bow Man Remake</h3>
+                    <h3 class="jogo-titulo"><a href="https://victorsassi.itch.io/bow-man" target="_blank" class="game-title-link">Bow Man Remake</a></h3>
                     <div class="jogo-descricao">
                         <p>Rethinking the classic game Bow Man as an exercise to fix the design problems in the original game.</p>
                     </div>
@@ -206,18 +230,19 @@
                             <li>Populated the world to help visualize the arrow's movement</li>
                         </ul>
                     </div>
+                    <a href="https://victorsassi.itch.io/bow-man" target="_blank" class="play-button">Play Game</a>
                 </div>
             </div>
 
             <!-- Side Project 6 -->
             <div class="jogo-card">
-                <a href="https://victorsassi.itch.io/live-as-a-penguin">
+                <a href="https://victorsassi.itch.io/live-as-a-penguin" target="_blank">
                     <div class="jogo-imagem">
                         <img src="Penguin.png" alt="Penguin">
                     </div>
                 </a>
                 <div class="jogo-detalhes">
-                    <h3 class="jogo-titulo">Live as a Penguin</h3>
+                    <h3 class="jogo-titulo"><a href="https://victorsassi.itch.io/live-as-a-penguin" target="_blank" class="game-title-link">Live as a Penguin</a></h3>
                     <div class="jogo-descricao">
                         <p>I developed this game to learn PuzzleScript. Live as a penguin! Experience life with all the perks of being a penguin — waddle, slide, and hunt for fish while trying to survive the challenges ahead!!</p>
                     </div>
@@ -228,13 +253,15 @@
                             <li>Implemented only with puzzlescript</li>
                         </ul>
                     </div>
+                    <a href="https://victorsassi.itch.io/live-as-a-penguin" target="_blank" class="play-button">Play Game</a>
                 </div>
             </div>
 
         </div>
+        </section>
         
         <!-- Contact Section -->
-        <section class="contact-section">
+        <section id="contact" class="contact-section">
             <h2 class="contact-titulo">Get in Touch</h2>
             <div class="contact-container">
                 <div class="contact-info">
@@ -279,5 +306,90 @@
             <p><span class="book-icon">📚</span> Developed with passion and lots of coffee <span class="coffee-icon">☕</span> — © 2025</p>
         </footer>
     </div>
+
+    <script>
+        // Mobile menu functionality
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Active link highlighting with proper offset
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section, header');
+            const navbarHeight = 60; // Height of our fixed navbar
+            const scrollOffset = 100; // Additional offset for better UX
+            const totalOffset = navbarHeight + scrollOffset;
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                const sectionId = section.getAttribute('id');
+                
+                // Check if section is in viewport considering our offset
+                if (scrollY >= (sectionTop - totalOffset) && 
+                    scrollY < (sectionTop + sectionHeight - totalOffset)) {
+                    current = sectionId;
+                }
+            });
+
+            // Update active states
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                const linkTarget = link.getAttribute('href').substring(1);
+                if (linkTarget === current) {
+                    link.classList.add('active');
+                }
+            });
+
+            // Handle edge case: if we're at the very top, highlight Home
+            if (window.scrollY < totalOffset) {
+                navLinks.forEach(link => link.classList.remove('active'));
+                const homeLink = document.querySelector('a[href="#home"]');
+                if (homeLink) homeLink.classList.add('active');
+            }
+        });
+
+        // Smooth scrolling with offset compensation
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                
+                if (targetSection) {
+                    const navbarHeight = 60;
+                    const scrollOffset = 20; // Small offset for visual breathing room
+                    const totalOffset = navbarHeight + scrollOffset;
+                    
+                    const targetPosition = targetSection.offsetTop - totalOffset;
+                    
+                    window.scrollTo({
+                        top: Math.max(0, targetPosition), // Ensure we don't scroll above page top
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Set initial active state on page load
+        window.addEventListener('load', () => {
+            // Trigger scroll event to set initial active state
+            window.dispatchEvent(new Event('scroll'));
+        });
+    </script>
 </body>
 </html>
